@@ -1,0 +1,57 @@
+<mvc:View controllerName="empmasterdata.controller.employees"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page showNavButton="true"
+		navButtonPress=".onNavBack">
+		<Table id="idEmpTable"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{
+				path: 'employees>/Employees'
+			}">
+			<headerToolbar>
+				<OverflowToolbar>
+					<content>
+						<Title text="{i18n>manageEmployees}" />
+					</content>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column>
+					<Label text="{i18n>empid}"
+						design="Bold" />
+				</Column>
+				<Column>
+					<Label text="{i18n>uname}"
+						design="Bold" />
+				</Column>
+				<Column>
+					<Label text="{i18n>email}"
+						design="Bold" />
+				</Column>
+				<Column>
+					<Label text="{i18n>action}"
+						design="Bold" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectNumber number="{employees>empid}" />
+						<ObjectIdentifier title="{employees>uname}"/>
+						<Text text="{employees>email}" />
+						<HBox>
+							<Button icon="sap-icon://display" press=".onDisplay"/>
+							<Button icon="sap-icon://edit" press=".onEdit"/>
+							<Button icon="sap-icon://delete" press=".onDelete"/>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

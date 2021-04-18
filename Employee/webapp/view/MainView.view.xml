@@ -1,0 +1,29 @@
+<mvc:View controllerName="empmasterdata.controller.MainView"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m">
+	<Panel>
+		<content>
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+				header="{i18n>addEmpTile}"
+				subheader="{i18n>createNewEmpTile}"
+				press=".onPressAddEmployee"
+				width="15%"
+				frameType= "TwoByOne">
+				<TileContent>
+					<ImageContent src="sap-icon://add-employee" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+				header="{i18n>employee}"
+				subheader="{i18n>manageEmployees}"
+				press=".onPressManageEmp"
+				width="15%"
+				frameType= "TwoByOne">
+				<TileContent>
+					<ImageContent src="sap-icon://employee" />
+				</TileContent>
+			</GenericTile>
+		</content>
+	</Panel>
+</mvc:View>

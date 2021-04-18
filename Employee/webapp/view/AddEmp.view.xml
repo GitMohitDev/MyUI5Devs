@@ -1,0 +1,74 @@
+<mvc:View controllerName="empmasterdata.controller.AddEmp"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page title="{i18n>addEmpTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+            <form:SimpleForm editable="true">
+                <!-- User Name -->
+                <Label text="{i18n>uname}"
+                    required="true" />
+                <Input type="Text"
+                    placeholder="{i18n>phuname}"
+                    width="40%"
+                    value="{/employee/uname}" />
+                <!-- Email ID -->
+                <Label text="{i18n>email}"
+                    required="true" />
+                <Input type="Text"
+                    value="{/employee/email}"
+                    placeholder="{i18n>phemail}"
+                    width="40%"/>
+                <!-- Gender -->
+                <Label text="{i18n>gender}"
+                    required="true" />
+                <ComboBox width="40%"
+                    value="{/employee/gender}"
+                    placeholder="{i18n>phgender}">
+                    <core:Item text="Male" />
+                    <core:Item text="Female" />
+                    <core:Item text="Others" />
+                </ComboBox>
+                <!-- Employee Type -->
+                <Label text="{i18n>empType}"
+                    required="true"/>
+                <RadioButtonGroup id="rbg1"
+                    columns="2" selectedIndex="{/employee/empType}"
+                    width="40%">
+                    <RadioButton id="RB1-1"
+                        text="{i18n>external}" />
+                    <RadioButton id="RB1-2"
+                        text="{i18n>internal}" />
+                </RadioButtonGroup>
+                <!-- Date of Birth -->
+                <Label text="{i18n>dob}"
+                    required="true" />
+                <DatePicker placeholder="{i18n>phdob}"
+                    width="40%"
+                    value="{/employee/dob}"/>
+                <!-- Date of Joining -->
+                <Label text="{i18n>doj}"
+                    required="true" />
+                <DatePicker placeholder="{i18n>phdoj}"
+                    width="40%"
+                    value="{/employee/doj}"/>
+            </form:SimpleForm>
+        </content>
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="{i18n>back}"
+                        press="onNavBack"
+                        type="Emphasized"></Button>
+                    <Button text="{i18n>save}"
+                        press=".onSave"
+                        type="Accept"></Button>
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

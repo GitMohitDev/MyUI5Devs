@@ -1,0 +1,11 @@
+<mvc:View xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>title}">
+		<!-- <headerContent>
+			<Button icon="sap-icon://hello-world" press=".onOpenDialog"/>
+		</headerContent> -->
+		<content>
+			<mvc:XMLView viewName="empmasterdata.view.MainView"/>
+		</content>
+	</Page>
+</mvc:View>

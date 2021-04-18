@@ -1,0 +1,12 @@
+<mvc:View controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<!-- <mvc:XMLView viewName="empmasterdata.view.MainView"/> -->
+	<Shell>
+		<App class="myApp"
+			id="app"/>
+	</Shell>
+</mvc:View>

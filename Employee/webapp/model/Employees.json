@@ -1,0 +1,13 @@
+{
+    "Employees": [
+        {   
+            "empid":"1",
+            "uname": "Mohit",
+            "email": "mohit_sharma@gmail.com",
+            "gender": "Male",
+            "empType": "Internal",
+            "dob": "01012000",
+            "doj": "02112000"
+        }
+    ]
+}
